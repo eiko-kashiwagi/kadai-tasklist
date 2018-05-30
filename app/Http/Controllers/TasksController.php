@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Message;
+use App\Task;
 
 class TasksController extends Controller
 {
