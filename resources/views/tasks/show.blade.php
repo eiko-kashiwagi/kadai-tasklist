@@ -4,6 +4,7 @@
 
     <h1>{{ $task->id }}'s New Task </h1>
 
+    <p>Title: {{ $task->title }}</p>
     <p>{{ $task->content }}</p>
 
     {!! link_to_route('tasks.edit', 'Edit this task', ['id' => $task->id]) !!}
