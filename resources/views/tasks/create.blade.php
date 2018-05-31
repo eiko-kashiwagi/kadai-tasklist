@@ -2,14 +2,15 @@
 
 @section('content')
 
-    <h1>タスク新規作成ページ</h1>
+    <h1>Add New Tasks</h1>
+
 
     {!! Form::model($task, ['route' => 'tasks.store']) !!}
 
-        {!! Form::label('content', 'メッセージ:') !!}
+        {!! Form::label('content', 'Tasks:') !!}
         {!! Form::text('content') !!}
 
-        {!! Form::submit('投稿') !!}
+        {!! Form::submit('Add') !!}
 
     {!! Form::close() !!}
 
