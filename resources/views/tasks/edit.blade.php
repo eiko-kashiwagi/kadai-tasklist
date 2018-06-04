@@ -4,17 +4,23 @@
 
     <h1>Edit {{ $task->id }}'s task </h1>
 
-    
-    {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
+ <div class="row">
+    <div class="col-xs-6">
+        {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
 
-        {!! Form::label('status', 'status:') !!}
-        {!! Form::text('status') !!}
-       
-        {!! Form::label('content', 'task:') !!}
-        {!! Form::text('content') !!}
-
-        {!! Form::submit('edit') !!}
+  <div class="form-group">
+                    {!! Form::label('status', 'staus:') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control']) !!}
+                </div>
+        
+                <div class="form-group">
+                    {!! Form::label('content', 'message:') !!}
+                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                </div>
+        
+                {!! Form::submit('更新', ['class' => 'btn btn-default']) !!}
 
     {!! Form::close() !!}
-
+        </div>
+    </div>
 @endsection
