@@ -9,8 +9,8 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>title</th>
-                    <th>messages</th>
+                    <th>status</th>
+                    <th>to do</th>
                 </tr>
             </thead>
             <tbody>
