@@ -15,9 +15,19 @@
             </div>
             <div>
                 @if (Auth::user()->id == $task->user_id)
+                    
+                      <button type="button" class="btn btn-default btn-xs">
+                          <span class="glyphicon glyphicon-trash">
                     {!! Form::open(['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
-                    {!! Form::close() !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                    {!! Form::close() !!}<br><br>
+                    </span></button>
+                    
+                    <button type="button" class="btn btn-default btn-xs">
+                          <span class="glyphicon glyphicon-pencil">
+                    {!! link_to_route('tasks.edit', 'Edit', ['id' => $task->id]) !!}
+                    </span></button>
+                   
                 @endif
             </div>
         </div>
