@@ -13,9 +13,15 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+                    <?php
+                        /*
                         <li>{!! link_to_route('users.index', 'Users') !!}</li>
+                        */
+                    ?>
+                    
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+                         
                             <ul class="dropdown-menu">
                                 <li><a href="#">My profile</a></li>
                                 <li role="separator" class="divider"></li>
@@ -24,15 +30,14 @@
                         </li>
                     @else
                         <button type="button" class="btn btn-default">
-                          <span class="glyphicon glyphicon-thumbs-up">
+                          <span class="glyphicon glyphicon-eye-open">
                              <li>{!! link_to_route('signup.get', 'Signup') !!}</li>
                         </span></button>
                         
                         <button type="button" class="btn btn-default">
-                          <span class="glyphicon glyphicon-ok-circle">
+                          <span class="glyphicon glyphicon-log-in">
                         <li>{!! link_to_route('login', 'Login') !!}</li>
                         </span></button>
-                
                     @endif
                 </ul>
             </div>
