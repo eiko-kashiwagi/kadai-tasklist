@@ -102,7 +102,11 @@ class TasksController extends Controller
             'task' => $task,
         ]);
        }
+       else
+           return view('welcome');
+       
     }
+
 
     /**
      * Update the specified resource in storage.
